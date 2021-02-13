@@ -15,7 +15,6 @@ class ValueMaxComparator implements Comparator<Integer>{
 
 	@Override
 	public int compare(Integer o1, Integer o2) {
-		// TODO Auto-generated method stub
 		String val1 = ""+o1+o2;
 		String val2 = ""+o2+o1;
 		return Integer.parseInt(val2) >= Integer.parseInt(val1) ? 1 : -1;
@@ -27,7 +26,6 @@ class ValueMinComparator implements Comparator<Integer>{
 
 	@Override
 	public int compare(Integer o1, Integer o2) {
-		// TODO Auto-generated method stub
 		String val1 = ""+o1+o2;
 		String val2 = ""+o2+o1;
 		return Integer.parseInt(val1) >= Integer.parseInt(val2) ? 1 : -1;

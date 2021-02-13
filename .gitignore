@@ -1,2 +1,4 @@
 **/target/**
 **.class
+CodingWork/target/classes/org/example/App.class
+CodingWork/target/test-classes/org/example/AppTest.class
