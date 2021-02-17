@@ -15,8 +15,8 @@ class ValueMaxComparator implements Comparator<Integer>{
 
 	@Override
 	public int compare(Integer o1, Integer o2) {
-		String val1 = ""+o1+o2;
-		String val2 = ""+o2+o1;
+		String val1 = ""+o1+o2; //1234
+		String val2 = ""+o2+o1; //3421
 		return Integer.parseInt(val2) >= Integer.parseInt(val1) ? 1 : -1;
 	}
 	
@@ -34,24 +34,36 @@ class ValueMinComparator implements Comparator<Integer>{
 }
 
 public class Nationwide {
-	
+
+	// Pascal Triangle
 	public static int getLayerMaximum(int n) {
 		if (n < 0) {
 			return -1;
 		}
-		return Math.pow(2, n) > Integer.MAX_VALUE ? -1 : (int) Math.pow(2, n);
+		double sum = 1.0;
+		for(int i= 1 ;i <=n; i++){
+			sum = sum * 2;
+		}
+
+		// Math.pow(2, n) -> sum
+		return sum > Integer.MAX_VALUE ? -1 : (int) sum;
 	}
 
+	// Max & Min Difference
 	public static int findDifference(int[] input) {
 		
 		ValueMaxComparator maxComparator = new ValueMaxComparator();
 		ValueMinComparator minComparator = new ValueMinComparator();
 
 		StringBuilder sb = new StringBuilder();
+
+		int[] tempArray = input;
+		Arrays.sort(input);
+
 		Arrays.stream(input).boxed().sorted(maxComparator).forEach(i -> {
 			sb.append(i);
 		});
-		
+
 		if(Double.valueOf(sb.toString()) > Integer.MAX_VALUE) {
 			return -1;
 		}
