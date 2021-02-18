@@ -1,4 +1,4 @@
-# Practise Coding Work
+Practise Coding Work
 ---
 
 This project is all about practising the different coding problems asked in different
