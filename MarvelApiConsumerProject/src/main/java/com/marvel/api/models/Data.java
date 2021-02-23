@@ -1,5 +1,5 @@
 
-package com.marvel.api.model;
+package com.marvel.api.models;
 
 import java.io.Serializable;
 import java.util.List;
@@ -9,22 +9,10 @@ import com.google.gson.annotations.SerializedName;
 
 public class Data implements Serializable
 {
-
-    @SerializedName("offset")
-    @Expose
     private String offset;
-    @SerializedName("limit")
-    @Expose
     private String limit;
-    @SerializedName("total")
-    @Expose
     private String total;
-    @SerializedName("count")
-    @Expose
     private String count;
-    @SerializedName("results")
-    @Expose
-    @Valid
     private List<Result> results = null;
     private final static long serialVersionUID = 6063159335557875396L;
 

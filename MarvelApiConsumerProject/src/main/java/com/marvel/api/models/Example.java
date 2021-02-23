@@ -1,5 +1,5 @@
 
-package com.marvel.api.model;
+package com.marvel.api.models;
 
 import java.io.Serializable;
 import javax.validation.Valid;
@@ -8,28 +8,12 @@ import com.google.gson.annotations.SerializedName;
 
 public class Example implements Serializable
 {
-
-    @SerializedName("code")
-    @Expose
     private String code;
-    @SerializedName("status")
-    @Expose
     private String status;
-    @SerializedName("copyright")
-    @Expose
     private String copyright;
-    @SerializedName("attributionText")
-    @Expose
     private String attributionText;
-    @SerializedName("attributionHTML")
-    @Expose
     private String attributionHTML;
-    @SerializedName("data")
-    @Expose
-    @Valid
     private Data data;
-    @SerializedName("etag")
-    @Expose
     private String etag;
     private final static long serialVersionUID = -988061985969353015L;
 

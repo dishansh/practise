@@ -1,18 +1,13 @@
 
-package com.marvel.api.model;
+package com.marvel.api.models;
 
 import java.io.Serializable;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
-public class Item implements Serializable
+public class ComicSummary implements Serializable
 {
-
-    @SerializedName("resourceURI")
-    @Expose
     private String resourceURI;
-    @SerializedName("name")
-    @Expose
     private String name;
     private final static long serialVersionUID = -7925716741000943313L;
 
@@ -20,7 +15,7 @@ public class Item implements Serializable
      * No args constructor for use in serialization
      * 
      */
-    public Item() {
+    public ComicSummary() {
     }
 
     /**
@@ -28,7 +23,7 @@ public class Item implements Serializable
      * @param name
      * @param resourceURI
      */
-    public Item(String resourceURI, String name) {
+    public ComicSummary(String resourceURI, String name) {
         super();
         this.resourceURI = resourceURI;
         this.name = name;
@@ -42,7 +37,7 @@ public class Item implements Serializable
         this.resourceURI = resourceURI;
     }
 
-    public Item withResourceURI(String resourceURI) {
+    public ComicSummary withResourceURI(String resourceURI) {
         this.resourceURI = resourceURI;
         return this;
     }
@@ -55,7 +50,7 @@ public class Item implements Serializable
         this.name = name;
     }
 
-    public Item withName(String name) {
+    public ComicSummary withName(String name) {
         this.name = name;
         return this;
     }

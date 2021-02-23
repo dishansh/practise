@@ -1,5 +1,5 @@
 
-package com.marvel.api.model;
+package com.marvel.api.models;
 
 import java.io.Serializable;
 import java.util.List;
@@ -9,20 +9,10 @@ import com.google.gson.annotations.SerializedName;
 
 public class Series implements Serializable
 {
-
-    @SerializedName("available")
-    @Expose
     private String available;
-    @SerializedName("returned")
-    @Expose
     private String returned;
-    @SerializedName("collectionURI")
-    @Expose
     private String collectionURI;
-    @SerializedName("items")
-    @Expose
-    @Valid
-    private List<Item___> items = null;
+    private List<SeriesSummary> items = null;
     private final static long serialVersionUID = -484282638769548312L;
 
     /**
@@ -39,7 +29,7 @@ public class Series implements Serializable
      * @param returned
      * @param items
      */
-    public Series(String available, String returned, String collectionURI, List<Item___> items) {
+    public Series(String available, String returned, String collectionURI, List<SeriesSummary> items) {
         super();
         this.available = available;
         this.returned = returned;
@@ -86,15 +76,15 @@ public class Series implements Serializable
         return this;
     }
 
-    public List<Item___> getItems() {
+    public List<SeriesSummary> getItems() {
         return items;
     }
 
-    public void setItems(List<Item___> items) {
+    public void setItems(List<SeriesSummary> items) {
         this.items = items;
     }
 
-    public Series withItems(List<Item___> items) {
+    public Series withItems(List<SeriesSummary> items) {
         this.items = items;
         return this;
     }

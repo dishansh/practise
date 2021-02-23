@@ -1,28 +1,15 @@
 
-package com.marvel.api.model;
+package com.marvel.api.models;
 
 import java.io.Serializable;
 import java.util.List;
-import javax.validation.Valid;
-import com.google.gson.annotations.Expose;
-import com.google.gson.annotations.SerializedName;
 
 public class Events implements Serializable
 {
-
-    @SerializedName("available")
-    @Expose
     private String available;
-    @SerializedName("returned")
-    @Expose
     private String returned;
-    @SerializedName("collectionURI")
-    @Expose
     private String collectionURI;
-    @SerializedName("items")
-    @Expose
-    @Valid
-    private List<Item__> items = null;
+    private List<EventSummary> items = null;
     private final static long serialVersionUID = -6488572432064422893L;
 
     /**
@@ -39,7 +26,7 @@ public class Events implements Serializable
      * @param returned
      * @param items
      */
-    public Events(String available, String returned, String collectionURI, List<Item__> items) {
+    public Events(String available, String returned, String collectionURI, List<EventSummary> items) {
         super();
         this.available = available;
         this.returned = returned;
@@ -86,15 +73,15 @@ public class Events implements Serializable
         return this;
     }
 
-    public List<Item__> getItems() {
+    public List<EventSummary> getItems() {
         return items;
     }
 
-    public void setItems(List<Item__> items) {
+    public void setItems(List<EventSummary> items) {
         this.items = items;
     }
 
-    public Events withItems(List<Item__> items) {
+    public Events withItems(List<EventSummary> items) {
         this.items = items;
         return this;
     }

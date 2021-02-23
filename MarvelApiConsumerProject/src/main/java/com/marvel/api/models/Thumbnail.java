@@ -1,5 +1,5 @@
 
-package com.marvel.api.model;
+package com.marvel.api.models;
 
 import java.io.Serializable;
 import com.google.gson.annotations.Expose;
@@ -7,12 +7,7 @@ import com.google.gson.annotations.SerializedName;
 
 public class Thumbnail implements Serializable
 {
-
-    @SerializedName("path")
-    @Expose
     private String path;
-    @SerializedName("extension")
-    @Expose
     private String extension;
     private final static long serialVersionUID = -8316897913231011347L;
 

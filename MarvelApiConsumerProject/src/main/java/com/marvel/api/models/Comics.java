@@ -1,28 +1,15 @@
 
-package com.marvel.api.model;
+package com.marvel.api.models;
 
 import java.io.Serializable;
 import java.util.List;
-import javax.validation.Valid;
-import com.google.gson.annotations.Expose;
-import com.google.gson.annotations.SerializedName;
 
 public class Comics implements Serializable
 {
-
-    @SerializedName("available")
-    @Expose
     private String available;
-    @SerializedName("returned")
-    @Expose
     private String returned;
-    @SerializedName("collectionURI")
-    @Expose
     private String collectionURI;
-    @SerializedName("items")
-    @Expose
-    @Valid
-    private List<Item> items = null;
+    private List<ComicSummary> comicSummaries = null;
     private final static long serialVersionUID = 5395616851129754447L;
 
     /**
@@ -37,14 +24,14 @@ public class Comics implements Serializable
      * @param collectionURI
      * @param available
      * @param returned
-     * @param items
+     * @param comicSummaries
      */
-    public Comics(String available, String returned, String collectionURI, List<Item> items) {
+    public Comics(String available, String returned, String collectionURI, List<ComicSummary> comicSummaries) {
         super();
         this.available = available;
         this.returned = returned;
         this.collectionURI = collectionURI;
-        this.items = items;
+        this.comicSummaries = comicSummaries;
     }
 
     public String getAvailable() {
@@ -86,16 +73,16 @@ public class Comics implements Serializable
         return this;
     }
 
-    public List<Item> getItems() {
-        return items;
+    public List<ComicSummary> getItems() {
+        return comicSummaries;
     }
 
-    public void setItems(List<Item> items) {
-        this.items = items;
+    public void setItems(List<ComicSummary> comicSummaries) {
+        this.comicSummaries = comicSummaries;
     }
 
-    public Comics withItems(List<Item> items) {
-        this.items = items;
+    public Comics withItems(List<ComicSummary> comicSummaries) {
+        this.comicSummaries = comicSummaries;
         return this;
     }
 

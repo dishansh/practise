@@ -1,53 +1,28 @@
 
-package com.marvel.api.model;
+package com.marvel.api.models;
 
 import java.io.Serializable;
 import java.util.List;
 import javax.validation.Valid;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonView;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
 public class Result implements Serializable
 {
-
-    @SerializedName("id")
-    @Expose
     private String id;
-    @SerializedName("name")
-    @Expose
     private String name;
-    @SerializedName("description")
-    @Expose
     private String description;
-    @SerializedName("modified")
-    @Expose
     private String modified;
-    @SerializedName("resourceURI")
-    @Expose
     private String resourceURI;
-    @SerializedName("urls")
-    @Expose
-    @Valid
     private List<Url> urls = null;
-    @SerializedName("thumbnail")
-    @Expose
-    @Valid
     private Thumbnail thumbnail;
-    @SerializedName("comics")
-    @Expose
-    @Valid
     private Comics comics;
-    @SerializedName("stories")
-    @Expose
-    @Valid
     private Stories stories;
-    @SerializedName("events")
-    @Expose
-    @Valid
     private Events events;
-    @SerializedName("series")
-    @Expose
-    @Valid
     private Series series;
     private final static long serialVersionUID = -4486492338462769528L;
 
@@ -126,10 +101,12 @@ public class Result implements Serializable
         return this;
     }
 
+    @JsonIgnore
     public String getModified() {
         return modified;
     }
 
+    @JsonIgnore
     public void setModified(String modified) {
         this.modified = modified;
     }
@@ -139,10 +116,12 @@ public class Result implements Serializable
         return this;
     }
 
+    @JsonIgnore
     public String getResourceURI() {
         return resourceURI;
     }
 
+    @JsonIgnore
     public void setResourceURI(String resourceURI) {
         this.resourceURI = resourceURI;
     }
@@ -152,10 +131,12 @@ public class Result implements Serializable
         return this;
     }
 
+    @JsonIgnore
     public List<Url> getUrls() {
         return urls;
     }
 
+    @JsonIgnore
     public void setUrls(List<Url> urls) {
         this.urls = urls;
     }
@@ -178,10 +159,12 @@ public class Result implements Serializable
         return this;
     }
 
+    @JsonIgnore
     public Comics getComics() {
         return comics;
     }
 
+    @JsonIgnore
     public void setComics(Comics comics) {
         this.comics = comics;
     }
@@ -191,10 +174,12 @@ public class Result implements Serializable
         return this;
     }
 
+    @JsonIgnore
     public Stories getStories() {
         return stories;
     }
 
+    @JsonIgnore
     public void setStories(Stories stories) {
         this.stories = stories;
     }
@@ -204,10 +189,12 @@ public class Result implements Serializable
         return this;
     }
 
+    @JsonIgnore
     public Events getEvents() {
         return events;
     }
 
+    @JsonIgnore
     public void setEvents(Events events) {
         this.events = events;
     }
@@ -217,10 +204,12 @@ public class Result implements Serializable
         return this;
     }
 
+    @JsonIgnore
     public Series getSeries() {
         return series;
     }
 
+    @JsonIgnore
     public void setSeries(Series series) {
         this.series = series;
     }
