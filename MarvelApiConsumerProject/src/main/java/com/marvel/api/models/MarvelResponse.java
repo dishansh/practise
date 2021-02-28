@@ -2,11 +2,8 @@
 package com.marvel.api.models;
 
 import java.io.Serializable;
-import javax.validation.Valid;
-import com.google.gson.annotations.Expose;
-import com.google.gson.annotations.SerializedName;
 
-public class Example implements Serializable
+public class MarvelResponse implements Serializable
 {
     private String code;
     private String status;
@@ -21,7 +18,7 @@ public class Example implements Serializable
      * No args constructor for use in serialization
      * 
      */
-    public Example() {
+    public MarvelResponse() {
     }
 
     /**
@@ -34,7 +31,7 @@ public class Example implements Serializable
      * @param etag
      * @param status
      */
-    public Example(String code, String status, String copyright, String attributionText, String attributionHTML, Data data, String etag) {
+    public MarvelResponse(String code, String status, String copyright, String attributionText, String attributionHTML, Data data, String etag) {
         super();
         this.code = code;
         this.status = status;
@@ -53,7 +50,7 @@ public class Example implements Serializable
         this.code = code;
     }
 
-    public Example withCode(String code) {
+    public MarvelResponse withCode(String code) {
         this.code = code;
         return this;
     }
@@ -66,7 +63,7 @@ public class Example implements Serializable
         this.status = status;
     }
 
-    public Example withStatus(String status) {
+    public MarvelResponse withStatus(String status) {
         this.status = status;
         return this;
     }
@@ -79,7 +76,7 @@ public class Example implements Serializable
         this.copyright = copyright;
     }
 
-    public Example withCopyright(String copyright) {
+    public MarvelResponse withCopyright(String copyright) {
         this.copyright = copyright;
         return this;
     }
@@ -92,7 +89,7 @@ public class Example implements Serializable
         this.attributionText = attributionText;
     }
 
-    public Example withAttributionText(String attributionText) {
+    public MarvelResponse withAttributionText(String attributionText) {
         this.attributionText = attributionText;
         return this;
     }
@@ -105,7 +102,7 @@ public class Example implements Serializable
         this.attributionHTML = attributionHTML;
     }
 
-    public Example withAttributionHTML(String attributionHTML) {
+    public MarvelResponse withAttributionHTML(String attributionHTML) {
         this.attributionHTML = attributionHTML;
         return this;
     }
@@ -118,7 +115,7 @@ public class Example implements Serializable
         this.data = data;
     }
 
-    public Example withData(Data data) {
+    public MarvelResponse withData(Data data) {
         this.data = data;
         return this;
     }
@@ -131,7 +128,7 @@ public class Example implements Serializable
         this.etag = etag;
     }
 
-    public Example withEtag(String etag) {
+    public MarvelResponse withEtag(String etag) {
         this.etag = etag;
         return this;
     }

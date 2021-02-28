@@ -3,15 +3,10 @@ package com.marvel.api.models;
 
 import java.io.Serializable;
 import java.util.List;
-import javax.validation.Valid;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonView;
-import com.google.gson.annotations.Expose;
-import com.google.gson.annotations.SerializedName;
 
-public class Result implements Serializable
+public class Character implements Serializable
 {
     private String id;
     private String name;
@@ -30,7 +25,7 @@ public class Result implements Serializable
      * No args constructor for use in serialization
      * 
      */
-    public Result() {
+    public Character() {
     }
 
     /**
@@ -47,7 +42,7 @@ public class Result implements Serializable
      * @param resourceURI
      * @param events
      */
-    public Result(String id, String name, String description, String modified, String resourceURI, List<Url> urls, Thumbnail thumbnail, Comics comics, Stories stories, Events events, Series series) {
+    public Character(String id, String name, String description, String modified, String resourceURI, List<Url> urls, Thumbnail thumbnail, Comics comics, Stories stories, Events events, Series series) {
         super();
         this.id = id;
         this.name = name;
@@ -70,7 +65,7 @@ public class Result implements Serializable
         this.id = id;
     }
 
-    public Result withId(String id) {
+    public Character withId(String id) {
         this.id = id;
         return this;
     }
@@ -83,7 +78,7 @@ public class Result implements Serializable
         this.name = name;
     }
 
-    public Result withName(String name) {
+    public Character withName(String name) {
         this.name = name;
         return this;
     }
@@ -96,7 +91,7 @@ public class Result implements Serializable
         this.description = description;
     }
 
-    public Result withDescription(String description) {
+    public Character withDescription(String description) {
         this.description = description;
         return this;
     }
@@ -111,7 +106,7 @@ public class Result implements Serializable
         this.modified = modified;
     }
 
-    public Result withModified(String modified) {
+    public Character withModified(String modified) {
         this.modified = modified;
         return this;
     }
@@ -126,7 +121,7 @@ public class Result implements Serializable
         this.resourceURI = resourceURI;
     }
 
-    public Result withResourceURI(String resourceURI) {
+    public Character withResourceURI(String resourceURI) {
         this.resourceURI = resourceURI;
         return this;
     }
@@ -141,7 +136,7 @@ public class Result implements Serializable
         this.urls = urls;
     }
 
-    public Result withUrls(List<Url> urls) {
+    public Character withUrls(List<Url> urls) {
         this.urls = urls;
         return this;
     }
@@ -154,7 +149,7 @@ public class Result implements Serializable
         this.thumbnail = thumbnail;
     }
 
-    public Result withThumbnail(Thumbnail thumbnail) {
+    public Character withThumbnail(Thumbnail thumbnail) {
         this.thumbnail = thumbnail;
         return this;
     }
@@ -169,7 +164,7 @@ public class Result implements Serializable
         this.comics = comics;
     }
 
-    public Result withComics(Comics comics) {
+    public Character withComics(Comics comics) {
         this.comics = comics;
         return this;
     }
@@ -184,7 +179,7 @@ public class Result implements Serializable
         this.stories = stories;
     }
 
-    public Result withStories(Stories stories) {
+    public Character withStories(Stories stories) {
         this.stories = stories;
         return this;
     }
@@ -199,7 +194,7 @@ public class Result implements Serializable
         this.events = events;
     }
 
-    public Result withEvents(Events events) {
+    public Character withEvents(Events events) {
         this.events = events;
         return this;
     }
@@ -214,7 +209,7 @@ public class Result implements Serializable
         this.series = series;
     }
 
-    public Result withSeries(Series series) {
+    public Character withSeries(Series series) {
         this.series = series;
         return this;
     }

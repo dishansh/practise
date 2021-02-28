@@ -3,9 +3,6 @@ package com.marvel.api.models;
 
 import java.io.Serializable;
 import java.util.List;
-import javax.validation.Valid;
-import com.google.gson.annotations.Expose;
-import com.google.gson.annotations.SerializedName;
 
 public class Data implements Serializable
 {
@@ -13,7 +10,7 @@ public class Data implements Serializable
     private String limit;
     private String total;
     private String count;
-    private List<Result> results = null;
+    private List<Character> characters = null;
     private final static long serialVersionUID = 6063159335557875396L;
 
     /**
@@ -29,15 +26,15 @@ public class Data implements Serializable
      * @param offset
      * @param limit
      * @param count
-     * @param results
+     * @param characters
      */
-    public Data(String offset, String limit, String total, String count, List<Result> results) {
+    public Data(String offset, String limit, String total, String count, List<Character> characters) {
         super();
         this.offset = offset;
         this.limit = limit;
         this.total = total;
         this.count = count;
-        this.results = results;
+        this.characters = characters;
     }
 
     public String getOffset() {
@@ -92,16 +89,16 @@ public class Data implements Serializable
         return this;
     }
 
-    public List<Result> getResults() {
-        return results;
+    public List<Character> getResults() {
+        return characters;
     }
 
-    public void setResults(List<Result> results) {
-        this.results = results;
+    public void setResults(List<Character> characters) {
+        this.characters = characters;
     }
 
-    public Data withResults(List<Result> results) {
-        this.results = results;
+    public Data withResults(List<Character> characters) {
+        this.characters = characters;
         return this;
     }
 
