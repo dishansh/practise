@@ -18,8 +18,14 @@ public class CharacterServiceImpl implements CharacterService{
 
     private static final Logger logger = Logger.getLogger(CharacterServiceImpl.class.getName());
 
-    @Autowired
+    //@Autowired
     MarvelApi marvelApi;
+
+    // Constructor Injection
+    @Autowired
+    public CharacterServiceImpl(MarvelApi marvelApi){
+        this.marvelApi = marvelApi;
+    }
 
     @Autowired
     FileOperations fileOperations;
