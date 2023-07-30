@@ -28,6 +28,11 @@ public class StringOperationsTest {
         assertEquals("maali", StringOperations.reverse("ilaam"));
         assertEquals("null", StringOperations.reverse("llun"));
         assertEquals(null, StringOperations.reverse(null));
+    }
 
+    @Test
+    public void findLongestSubstringTest(){
+        //assertEquals("abc", StringOperations.findLongestSubstringWithoutRepeatition("abcabcab"));
+        assertEquals("abde", StringOperations.findLongestSubstringWithoutRepeatition("abcabcabde"));
     }
 }

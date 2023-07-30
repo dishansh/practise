@@ -1,6 +1,8 @@
 package com.stringprograms;
 
+import java.util.ArrayList;
 import java.util.LinkedHashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.function.Function;
 
@@ -46,5 +48,33 @@ public class StringOperations {
 
         // Other way can be using StringBuilder's reverse() method
         // return new StringBuilder(line).reverse().toString();
+    }
+
+    public static String findLongestSubstringWithoutRepeatition(String word) {
+
+        // abcabcabde -> abc
+        if(word.length() < 2) {
+            return word;
+        }
+
+        int start = 0;
+        int end = 0;
+        String longestSubString = "";
+        List<Character> iteratedString = new ArrayList<>();
+        while(end < word.length()) {
+            iteratedString.add(word.charAt(end));
+            if(iteratedString.contains(word.charAt(end))) {
+                System.out.println(iteratedString);
+                if(word.substring(start, end).length() > longestSubString.length()) {
+                    longestSubString = word.substring(start, end);
+                }
+                start = end;
+                iteratedString.clear();
+                iteratedString.add(word.charAt(end));
+            }
+            end++;
+        }
+        System.out.println(iteratedString);
+        return iteratedString.size() > longestSubString.length() ? iteratedString.toString() : longestSubString;
     }
 }
