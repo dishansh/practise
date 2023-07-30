@@ -2,8 +2,6 @@
 package com.marvel.api.models;
 
 import java.io.Serializable;
-import com.google.gson.annotations.Expose;
-import com.google.gson.annotations.SerializedName;
 
 public class Thumbnail implements Serializable
 {
@@ -18,11 +16,6 @@ public class Thumbnail implements Serializable
     public Thumbnail() {
     }
 
-    /**
-     * 
-     * @param path
-     * @param extension
-     */
     public Thumbnail(String path, String extension) {
         super();
         this.path = path;
@@ -37,11 +30,6 @@ public class Thumbnail implements Serializable
         this.path = path;
     }
 
-    public Thumbnail withPath(String path) {
-        this.path = path;
-        return this;
-    }
-
     public String getExtension() {
         return extension;
     }
@@ -50,9 +38,11 @@ public class Thumbnail implements Serializable
         this.extension = extension;
     }
 
-    public Thumbnail withExtension(String extension) {
-        this.extension = extension;
-        return this;
+    @Override
+    public String toString() {
+        return "Thumbnail{" +
+                "path='" + path + '\'' +
+                ", extension='" + extension + '\'' +
+                '}';
     }
-
 }

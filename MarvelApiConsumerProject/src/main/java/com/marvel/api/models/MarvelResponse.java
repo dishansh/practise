@@ -11,7 +11,7 @@ public class MarvelResponse implements Serializable
     private String attributionText;
     private String attributionHTML;
     private Data data;
-    private String etag;
+    private String eTag;
     private final static long serialVersionUID = -988061985969353015L;
 
     /**
@@ -21,17 +21,7 @@ public class MarvelResponse implements Serializable
     public MarvelResponse() {
     }
 
-    /**
-     * 
-     * @param copyright
-     * @param code
-     * @param data
-     * @param attributionHTML
-     * @param attributionText
-     * @param etag
-     * @param status
-     */
-    public MarvelResponse(String code, String status, String copyright, String attributionText, String attributionHTML, Data data, String etag) {
+    public MarvelResponse(String code, String status, String copyright, String attributionText, String attributionHTML, Data data, String eTag) {
         super();
         this.code = code;
         this.status = status;
@@ -39,7 +29,7 @@ public class MarvelResponse implements Serializable
         this.attributionText = attributionText;
         this.attributionHTML = attributionHTML;
         this.data = data;
-        this.etag = etag;
+        this.eTag = eTag;
     }
 
     public String getCode() {
@@ -50,22 +40,12 @@ public class MarvelResponse implements Serializable
         this.code = code;
     }
 
-    public MarvelResponse withCode(String code) {
-        this.code = code;
-        return this;
-    }
-
     public String getStatus() {
         return status;
     }
 
     public void setStatus(String status) {
         this.status = status;
-    }
-
-    public MarvelResponse withStatus(String status) {
-        this.status = status;
-        return this;
     }
 
     public String getCopyright() {
@@ -76,22 +56,12 @@ public class MarvelResponse implements Serializable
         this.copyright = copyright;
     }
 
-    public MarvelResponse withCopyright(String copyright) {
-        this.copyright = copyright;
-        return this;
-    }
-
     public String getAttributionText() {
         return attributionText;
     }
 
     public void setAttributionText(String attributionText) {
         this.attributionText = attributionText;
-    }
-
-    public MarvelResponse withAttributionText(String attributionText) {
-        this.attributionText = attributionText;
-        return this;
     }
 
     public String getAttributionHTML() {
@@ -115,21 +85,16 @@ public class MarvelResponse implements Serializable
         this.data = data;
     }
 
-    public MarvelResponse withData(Data data) {
-        this.data = data;
-        return this;
+    public String getETag() {
+        return eTag;
     }
 
-    public String getEtag() {
-        return etag;
+    public void setETag(String eTag) {
+        this.eTag = eTag;
     }
 
-    public void setEtag(String etag) {
-        this.etag = etag;
-    }
-
-    public MarvelResponse withEtag(String etag) {
-        this.etag = etag;
+    public MarvelResponse withEtag(String eTag) {
+        this.eTag = eTag;
         return this;
     }
 
@@ -142,7 +107,7 @@ public class MarvelResponse implements Serializable
                 ", attributionText='" + attributionText + '\'' +
                 ", attributionHTML='" + attributionHTML + '\'' +
                 ", data=" + data +
-                ", etag='" + etag + '\'' +
+                ", eTag='" + eTag + '\'' +
                 '}';
     }
 }
